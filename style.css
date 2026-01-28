@@ -24,22 +24,16 @@
 body {
     background-color: var(--c-slate-300);
     font-family: "Outfit";
+    min-height: 100vh;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    flex-grow: 1;
 }
 
 .qr-component {
     width: 320px;
     height: 499px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-300);
     padding: var(--spacing-200) var(--spacing-200) var(--spacing-500);
@@ -64,9 +58,6 @@ main {
 }
 
 .qr-component__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: var(--spacing-200);
     align-self: stretch;
     padding: 0 var(--spacing-200);
@@ -88,14 +79,6 @@ main {
     text-align: center;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-}
-
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -103,4 +86,19 @@ footer {
 
 .attribution a {
     color: #3E52A3;
+}
+
+body,
+main,
+.qr-component,
+.qr-component__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body,
+main,
+.qr-component__text {
+    align-items: center;
 }
